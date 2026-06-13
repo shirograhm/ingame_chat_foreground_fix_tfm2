@@ -9,7 +9,7 @@
             "script": "C:\\Users\\xavie\\Documents\\Personal\\Teamfight Manager 2\\SDKs\\mod-sdk-0.4.12\\build_mod_cargo.ps1",
             "args": [
                 "-Project",
-                "..\\..\\Mods\\chat_toggle_tfm2",
+                "..\\..\\Mods\\ingame_chat_foreground_fix_tfm2",
                 "-SdkDir",
                 "."
             ]

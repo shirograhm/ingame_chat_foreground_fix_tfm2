@@ -1,2 +1,3 @@
-# Chat Toggle for TFM2
-Adds a button that toggles chat visibility to the ingame UI in Teamfight Manager 2.
+# Ingame Chat Foreground Fix - TFM2
+
+Fixes the weird overlap with the ingame chat and the champion current info hover information.
