@@ -2020,6 +2020,16 @@ ingame:ingame_ui {
     }
   }
 
+  #chat_list:empty {
+    x: 19px;
+    y: 780px;
+    height: 300px;
+
+    child_type: TopToBottom {
+      spacing: 4px;
+    }
+  }
+
   #champion_tooltip:color {
     width: 335px;
     height: 106px;
@@ -2476,16 +2486,6 @@ ingame:ingame_ui {
     }
   }
 
-  #chat_list:empty {
-    x: 19px;
-    y: 780px;
-    height: 300px;
-
-    child_type: TopToBottom {
-      spacing: 4px;
-    }
-  }
-
   #item_tooltip:color {
     width: 274px;
     height: 250px;
@@ -2643,6 +2643,8 @@ ingame:ingame_ui {
 
     x: 571px;
     y: 1037px;
+
+    visible: false;
 
     z: 200;
 
