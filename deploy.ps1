@@ -15,10 +15,11 @@ $repo = $PSScriptRoot
 $modId = Split-Path -Leaf $repo
 
 # --- what gets deployed -----------------------------------------------------
-# mod.workshop_id is deliberately absent: it is for the uploader, not the game.
 $Include = @(
     "mod.mod_info",
     "mod.override_info",
+    "mod.workshop_id",
+    "README.md",
     "LICENSE",
     "preview.png",
     "ui"
