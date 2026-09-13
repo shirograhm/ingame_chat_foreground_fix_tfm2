@@ -19,3 +19,5 @@ target/
 *.workshop_id
 *.dll
 *.xcf
+
+deploy.ps1
