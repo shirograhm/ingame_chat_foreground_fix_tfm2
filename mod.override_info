@@ -1,10 +1,6 @@
 {
   "asset/base/ui/layout/ingame": {
-    "remapping": "asset/chat_toggle_tfm2/ui/layout/ingame",
-    "type": "override"
-  },
-  "asset/base/ui/layout/ingame_component/chat": {
-    "remapping": "asset/chat_toggle_tfm2/ui/layout/ingame_component/chat",
+    "remapping": "asset/ingame_chat_foreground_fix_tfm2/ui/layout/ingame",
     "type": "override"
   }
 }

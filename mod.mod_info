@@ -1,13 +1,14 @@
 {
+  "mod_id": "ingame_chat_foreground_fix_tfm2",
   "name": "Ingame Chat Foreground Fix",
   "author": "shirograhm",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Fixes the weird overlap with the ingame chat and the champion current info hover information.",
-  "last_updated": "2026-06-14",
+  "last_updated": "2026-09-13",
   "dependencies": [
     {
       "mod_id": "base",
-      "version": ">=0.4.12"
+      "version": ">=0.6.0"
     }
   ]
 }

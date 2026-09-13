@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Deploy",
+            "type": "PowerShell",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "script": "${workspaceFolder}\\deploy.ps1"
+        },
+        {
+            "name": "Deploy (dry run)",
+            "type": "PowerShell",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "script": "${workspaceFolder}\\deploy.ps1",
+            "args": [
+                "-WhatIf"
+            ]
+        }
+    ]
+}

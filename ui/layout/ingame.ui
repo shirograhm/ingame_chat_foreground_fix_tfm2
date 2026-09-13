@@ -7,6 +7,72 @@ ingame:ingame_ui {
     y: 64px;
     width: 960px;
     height: 960px;
+
+    #dm_center:empty {
+      width: 100%;
+      height: 100%;
+      ignore_event: true;
+
+      #count:label {
+        @"asset/base/style/main#bold_label";
+        anchor_x: 0.5;
+        pivot_x: 0.5;
+        anchor_y: 0.5;
+        pivot_y: 0.5;
+        width: 400px;
+        height: 220px;
+        size: 150;
+        outline: 2;
+        color: #ffffff99;
+        outline_color: #000000cc;
+        text: "10";
+        align_x: Center;
+        align_y: Center;
+        visible: false;
+      }
+
+      #overtime:empty {
+        anchor_x: 0.5;
+        pivot_x: 0.5;
+        anchor_y: 0.5;
+        pivot_y: 0.5;
+        width: 960px;
+        height: 150px;
+        visible: false;
+
+        #title:label {
+          @"asset/base/style/main#bold_label";
+          anchor_x: 0.5;
+          pivot_x: 0.5;
+          y: 0px;
+          width: 960px;
+          height: 76px;
+          size: 56;
+          outline: 2;
+          color: #fad33eff;
+          outline_color: #000000ff;
+          text: "#asset/base/text/ui?ingame.overtime_title";
+          align_x: Center;
+          align_y: Center;
+        }
+
+        #desc:label {
+          @"asset/base/style/main#bold_label";
+          anchor_x: 0.5;
+          pivot_x: 0.5;
+          y: 82px;
+          width: 960px;
+          height: 48px;
+          size: 28;
+          outline: 1;
+          color: #e8e8e8ff;
+          outline_color: #000000ff;
+          text: "#asset/base/text/ui?ingame.overtime_desc";
+          align_x: Center;
+          align_y: Center;
+        }
+      }
+    }
   }
 
   #header:color {
@@ -552,6 +618,62 @@ ingame:ingame_ui {
         align_y: Center;
       }
     }
+
+    #dm_scoreboard:color {
+      color: #161721ff;
+      width: 300px;
+      height: 64px;
+      anchor_x: 0.5;
+      pivot_x: 0.5;
+      y: 0px;
+      visible: false;
+
+      rounding: Individual {
+        bottom_left: 12;
+        bottom_right: 12;
+      }
+
+      #blue_kill:label {
+        @"asset/base/style/main#bold_label";
+        anchor_x: 0.5;
+        pivot_x: 1;
+        x: -62px;
+        width: 120px;
+        height: 64px;
+        size: 40;
+        color: #5b73ffff;
+        text: "0";
+        align_x: Right;
+        align_y: Center;
+      }
+
+      #timer:label {
+        @"asset/base/style/main#bold_label";
+        anchor_x: 0.5;
+        pivot_x: 0.5;
+        width: 120px;
+        height: 64px;
+        size: 28;
+        color: #e8e8e8ff;
+        text: "02:00";
+        align_x: Center;
+        align_y: Center;
+      }
+
+      #red_kill:label {
+        @"asset/base/style/main#bold_label";
+        anchor_x: 0.5;
+        pivot_x: 0;
+        x: 62px;
+        width: 120px;
+        height: 64px;
+        size: 40;
+        color: #ef6471ff;
+        text: "0";
+        align_x: Left;
+        align_y: Center;
+      }
+    }
   }
 
   #player_info:color {
@@ -912,9 +1034,9 @@ ingame:ingame_ui {
         #row0:empty {
           width: 877px;
           height: 36px;
-          #position:image { anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/top"; }
+          #position:image { focusable: true; anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/top"; }
           #bar:color { x: 34px; anchor_y: 0.5; pivot_y: 0.5; width: 4px; height: 28px; color: #5b73ffff; }
-          #champion:color { x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
+          #champion:color { focusable: true; x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
           #name:label { @"asset/base/style/main#bold_label"; x: 90px; width: 190px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item0:label { @"asset/base/style/main#label"; x: 300px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item1:label { @"asset/base/style/main#label"; x: 480px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
@@ -923,9 +1045,9 @@ ingame:ingame_ui {
         #row1:empty {
           width: 877px;
           height: 36px;
-          #position:image { anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/jungle"; }
+          #position:image { focusable: true; anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/jungle"; }
           #bar:color { x: 34px; anchor_y: 0.5; pivot_y: 0.5; width: 4px; height: 28px; color: #5b73ffff; }
-          #champion:color { x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
+          #champion:color { focusable: true; x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
           #name:label { @"asset/base/style/main#bold_label"; x: 90px; width: 190px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item0:label { @"asset/base/style/main#label"; x: 300px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item1:label { @"asset/base/style/main#label"; x: 480px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
@@ -934,9 +1056,9 @@ ingame:ingame_ui {
         #row2:empty {
           width: 877px;
           height: 36px;
-          #position:image { anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/mid"; }
+          #position:image { focusable: true; anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/mid"; }
           #bar:color { x: 34px; anchor_y: 0.5; pivot_y: 0.5; width: 4px; height: 28px; color: #5b73ffff; }
-          #champion:color { x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
+          #champion:color { focusable: true; x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
           #name:label { @"asset/base/style/main#bold_label"; x: 90px; width: 190px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item0:label { @"asset/base/style/main#label"; x: 300px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item1:label { @"asset/base/style/main#label"; x: 480px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
@@ -945,9 +1067,9 @@ ingame:ingame_ui {
         #row3:empty {
           width: 877px;
           height: 36px;
-          #position:image { anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/bottom"; }
+          #position:image { focusable: true; anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/bottom"; }
           #bar:color { x: 34px; anchor_y: 0.5; pivot_y: 0.5; width: 4px; height: 28px; color: #5b73ffff; }
-          #champion:color { x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
+          #champion:color { focusable: true; x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
           #name:label { @"asset/base/style/main#bold_label"; x: 90px; width: 190px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item0:label { @"asset/base/style/main#label"; x: 300px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item1:label { @"asset/base/style/main#label"; x: 480px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
@@ -956,9 +1078,9 @@ ingame:ingame_ui {
         #row4:empty {
           width: 877px;
           height: 36px;
-          #position:image { anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/support"; }
+          #position:image { focusable: true; anchor_y: 0.5; pivot_y: 0.5; width: 28px; height: 28px; source: "asset/base/ui/icons/support"; }
           #bar:color { x: 34px; anchor_y: 0.5; pivot_y: 0.5; width: 4px; height: 28px; color: #5b73ffff; }
-          #champion:color { x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
+          #champion:color { focusable: true; x: 46px; width: 28px; height: 28px; anchor_y: 0.5; pivot_y: 0.5; rounding: Uniform { rounding: 6; } color: #1d1f2cff; #icon:image { width: 28px; height: 28px; anchor_x: 0.5; anchor_y: 0.5; pivot_x: 0.5; pivot_y: 0.5; } }
           #name:label { @"asset/base/style/main#bold_label"; x: 90px; width: 190px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item0:label { @"asset/base/style/main#label"; x: 300px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
           #item1:label { @"asset/base/style/main#label"; x: 480px; width: 170px; height: 36px; size: 16; align_y: Center; fit_width: true; }
@@ -1691,7 +1813,7 @@ ingame:ingame_ui {
       y: 4px;
 
       icon: {
-        source: "asset/base/ui/ingame/play";
+        source: "asset/base/ui/icons/play_time";
         rect: {
           x: 4;
           y: 4;
@@ -1722,7 +1844,7 @@ ingame:ingame_ui {
       y: 4px;
 
       icon: {
-        source: "asset/base/ui/ingame/play";
+        source: "asset/base/ui/icons/play_time";
         rect: {
           x: 4;
           y: 4;
@@ -1753,7 +1875,7 @@ ingame:ingame_ui {
       y: 4px;
 
       icon: {
-        source: "asset/base/ui/ingame/play";
+        source: "asset/base/ui/icons/play_time";
         rect: {
           x: 4;
           y: 4;
@@ -1784,7 +1906,7 @@ ingame:ingame_ui {
       y: 4px;
 
       icon: {
-        source: "asset/base/ui/ingame/play";
+        source: "asset/base/ui/icons/play_time";
         rect: {
           x: 4;
           y: 4;
@@ -1815,7 +1937,7 @@ ingame:ingame_ui {
       y: 4px;
 
       icon: {
-        source: "asset/base/ui/ingame/play";
+        source: "asset/base/ui/icons/play_time";
         rect: {
           x: 4;
           y: 4;
@@ -1846,7 +1968,7 @@ ingame:ingame_ui {
       y: 4px;
 
       icon: {
-        source: "asset/base/ui/ingame/play";
+        source: "asset/base/ui/icons/play_time";
         rect: {
           x: 4;
           y: 4;
@@ -2641,12 +2763,12 @@ ingame:ingame_ui {
     width: 36px;
     height: 36px;
 
-    x: 571px;
-    y: 1037px;
-
-    visible: false;
+    x: 942px;
+    y: 988px;
 
     z: 200;
+
+    visible: false;
 
     #chat_btn_bg:color {
       width: 36px;
@@ -2701,6 +2823,22 @@ ingame:ingame_ui {
           rounding: 6;
         }
       }
+    }
+  }
+
+  #pad_view_result:color_icon_button {
+    @"asset/base/style/main#tertiary_button";
+    x: 24px;
+    y: 136px;
+    width: 288px;
+    height: 40px;
+    visible: false;
+
+    text: {
+      text: "#asset/base/text/ui?gamepad.hint.view_result";
+      align_x: Center;
+      align_y: Center;
+      size: 18;
     }
   }
 
